@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 360px;
+    padding: 24px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.calculator h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.calculator-display {
+    min-height: 100px;
+    margin-bottom: 18px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #1f2937;
+    color: white;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#previous-display {
+    min-height: 24px;
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+#current-display {
+    font-size: 36px;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.calculator-buttons button {
+    min-height: 60px;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #e5e7eb;
+    transition: transform 0.1s, opacity 0.1s;
+}
+
+.calculator-buttons button:hover {
+    opacity: 0.8;
+}
+
+.calculator-buttons button:active {
+    transform: scale(0.95);
+}
+
+.calculator-buttons .operator {
+    background: #dbeafe;
+}
+
+.calculator-buttons .action {
+    background: #fee2e2;
+}
+
+.calculator-buttons .equals {
+    background: #2563eb;
+    color: white;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        padding: 18px;
+    }
+
+    .calculator-buttons {
+        gap: 7px;
+    }
+
+    .calculator-buttons button {
+        min-height: 55px;
+        font-size: 18px;
+    }
+
+    #current-display {
+        font-size: 30px;
+    }
+}
