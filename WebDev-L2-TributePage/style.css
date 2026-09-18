@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f8f5ef;
+  color: #2d241f;
+}
+
+/* Hero */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+
+  background:
+    linear-gradient(rgba(35, 25, 18, 0.65), rgba(35, 25, 18, 0.65)),
+    url("shivaji-maharaj.png");
+
+  background-size: cover;
+  background-position: cover;
+}
+
+.hero-content {
+  max-width: 850px;
+  color: white;
+}
+
+.subtitle {
+  margin-bottom: 12px;
+  font-size: 20px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin-bottom: 20px;
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.1;
+}
+
+.hero-text {
+  margin: 0 auto 30px;
+  max-width: 650px;
+  font-size: 20px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 13px 25px;
+  border-radius: 30px;
+  background: #c56a2d;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Common Section */
+
+.section {
+  width: min(1100px, 90%);
+  margin: auto;
+  padding: 90px 0;
+}
+
+.section-heading {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.section-label {
+  margin-bottom: 8px;
+  color: #b45825;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.section h2 {
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+/* About */
+
+.about {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.section-image img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+.section-content h2 {
+  margin-bottom: 22px;
+}
+
+.section-content p:not(.section-label) {
+  margin-bottom: 18px;
+  font-size: 18px;
+  color: #5d514a;
+}
+
+/* Timeline */
+
+.timeline-section {
+  max-width: 900px;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 35px;
+  border-left: 3px solid #d48a55;
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: -44px;
+  top: 6px;
+  border-radius: 50%;
+  background: #b45825;
+  border: 4px solid #f8f5ef;
+}
+
+.year {
+  font-weight: bold;
+  color: #b45825;
+  font-size: 18px;
+}
+
+.timeline-item h3 {
+  margin-bottom: 6px;
+  font-size: 23px;
+}
+
+.timeline-item p {
+  color: #655950;
+}
+
+/* Quote */
+
+.quote-section {
+  padding: 100px 20px;
+  text-align: center;
+  background: #2d241f;
+  color: white;
+}
+
+.quote-content {
+  width: min(850px, 90%);
+  margin: auto;
+}
+
+.quote-mark {
+  font-size: 70px;
+  line-height: 0.6;
+}
+
+blockquote {
+  margin: 25px 0;
+  font-size: clamp(24px, 4vw, 38px);
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.quote-note {
+  color: #d8ccc3;
+}
+
+/* Legacy Cards */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 30px 22px;
+  border-radius: 16px;
+  background: white;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  margin-bottom: 15px;
+  font-size: 35px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 21px;
+}
+
+.card p {
+  color: #655950;
+}
+
+/* Footer */
+
+footer {
+  padding: 30px 20px;
+  text-align: center;
+  background: #211a16;
+  color: #d8ccc3;
+}
+
+footer p:first-child {
+  margin-bottom: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-text {
+    font-size: 17px;
+  }
+
+  .section {
+    padding: 65px 0;
+  }
+
+  .section h2 {
+    font-size: 32px;
+  }
+
+  .timeline {
+    margin-left: 10px;
+    padding-left: 25px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .timeline-item::before {
+    left: -34px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero {
+    background-size: cover;
+    background-position: center 25%;
+  }
+}
