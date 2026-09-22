@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: #eef2f5;
+  color: #263238;
+  padding: 40px 20px;
+}
+
+.todo-container {
+  width: min(600px, 100%);
+  margin: auto;
+  padding: 35px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 32px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #68747d;
+  margin-bottom: 25px;
+}
+
+.task-input {
+  display: flex;
+  gap: 10px;
+}
+
+.task-input input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #cbd5db;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  padding: 12px 16px;
+  background: #2878a8;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #1f638b;
+}
+
+.task-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 25px 0 15px;
+  color: #68747d;
+  font-size: 14px;
+}
+
+#clearCompleted {
+  padding: 8px 10px;
+  background: #e7edf1;
+  color: #263238;
+}
+
+#clearCompleted:hover {
+  background: #d5e0e6;
+}
+
+#taskList {
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 0;
+  border-bottom: 1px solid #e5e9ec;
+}
+
+.task-item span {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.task-item.completed span {
+  color: #89949b;
+  text-decoration: line-through;
+}
+
+.task-item button {
+  padding: 7px 10px;
+  font-size: 13px;
+}
+
+.edit-btn {
+  background: #e3a008;
+}
+
+.edit-btn:hover {
+  background: #c58b06;
+}
+
+.delete-btn {
+  background: #d9534f;
+}
+
+.delete-btn:hover {
+  background: #b9403c;
+}
+
+.empty-message {
+  text-align: center;
+  color: #89949b;
+  padding: 25px 0 10px;
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .todo-container {
+    padding: 22px;
+  }
+
+  .task-input {
+    flex-direction: column;
+  }
+
+  .task-input button {
+    width: 100%;
+  }
+
+  .task-info {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

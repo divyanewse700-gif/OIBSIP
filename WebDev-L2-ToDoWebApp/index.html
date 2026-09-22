@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My To-Do List</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="todo-container">
+      <h1>My To-Do List</h1>
+
+      <p class="subtitle">Keep your day organized, one task at a time.</p>
+
+      <div class="task-input">
+        <input type="text" id="taskInput" placeholder="Enter a task..." />
+
+        <button id="addTaskBtn">Add Task</button>
+      </div>
+
+      <div class="task-info">
+        <span id="taskCount">0 tasks</span>
+
+        <button id="clearCompleted">Clear Completed</button>
+      </div>
+
+      <ul id="taskList"></ul>
+
+      <p id="emptyMessage" class="empty-message">
+        No tasks yet. Add your first task!
+      </p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
