@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+  background: #edf1f5;
+  color: #263238;
+}
+
+.auth-container {
+  width: min(430px, 100%);
+}
+
+.auth-card,
+.dashboard {
+  padding: 35px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.auth-card h1 {
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.subtitle {
+  margin-bottom: 25px;
+  text-align: center;
+  color: #68747d;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 12px;
+  border: 1px solid #cbd5db;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+}
+
+input:focus {
+  border-color: #2878a8;
+}
+
+form button,
+#logoutBtn {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #2878a8;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover,
+#logoutBtn:hover {
+  background: #1f638b;
+}
+
+.switch-text {
+  margin-top: 22px;
+  text-align: center;
+  color: #68747d;
+  font-size: 14px;
+}
+
+.switch-text button {
+  border: none;
+  background: none;
+  color: #2878a8;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.message {
+  min-height: 20px;
+  margin-top: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.dashboard h1 {
+  margin: 5px 0 10px;
+}
+
+.dashboard p {
+  color: #68747d;
+}
+
+.dashboard .small-title {
+  color: #2878a8;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#logoutBtn {
+  flex-shrink: 0;
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .auth-card,
+  .dashboard {
+    padding: 25px;
+  }
+
+  .dashboard {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
